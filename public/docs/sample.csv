@@ -1,0 +1,13 @@
+date,category,amount,region
+2025-06-01,Hardware,1200,North
+2025-06-02,Software,800,West
+2025-06-03,Services,450,East
+2025-06-04,Hardware,650,South
+2025-07-01,Hardware,900,North
+2025-07-02,Software,700,West
+2025-07-05,Services,500,East
+2025-07-10,Hardware,1100,South
+2025-08-01,Hardware,950,North
+2025-08-03,Software,720,West
+2025-08-07,Services,480,East
+2025-08-11,Hardware,1000,South
