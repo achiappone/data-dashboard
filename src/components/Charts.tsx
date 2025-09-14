@@ -20,29 +20,6 @@ const colorFor = (name: string, palette: string[]) => {
   return palette[idx];
 };
 
-
-function renderCategoryLegend(props: any) {
-  const payload = (props?.payload ?? []) as Array<{ value: string }>;
-  return (
-    <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap" }}>
-      {payload.map((entry, i) => (
-        <li key={i} style={{ marginRight: 12, display: "flex", alignItems: "center" }}>
-          <span
-            style={{
-              display: "inline-block",
-              width: 12,
-              height: 12,
-              backgroundColor: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
-              marginRight: 6,
-            }}
-          />
-          {entry.value}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 function renderRegionLegend(props: any) {
   const payload = (props?.payload ?? []) as Array<{ value: string }>;
   return (
