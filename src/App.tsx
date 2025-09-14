@@ -16,6 +16,7 @@ import type { ParseResult, ParseConfig } from "papaparse";
 // Works locally and on GitHub Pages when vite.config.ts has base: "/data-dashboard/"
 // Use BASE_URL so it works locally AND on GitHub Pages (/data-dashboard/)
 const csvUrl = `${import.meta.env.BASE_URL}docs/sample.csv`;
+const sampleUrl = `${import.meta.env.BASE_URL}docs/sample.csv`;
 
 
 type CsvRow = { date: string; category: string; amount: number; region: string };
@@ -114,7 +115,12 @@ export default function App() {
       <Container sx={{ py: 3 }}>
         <Stack spacing={2}>
           <Paper sx={{ p: 2 }}>
-            <CSVUploader onRows={setRows} />
+            <CSVUploader
+              onRows={setRows}             // or append if you prefer
+              showDownload
+              sampleUrl={sampleUrl}
+              sampleFilename="sample.csv"
+            />
           </Paper>
 
           <Paper sx={{ p: 2 }}>
